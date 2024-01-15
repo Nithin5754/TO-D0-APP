@@ -1,10 +1,7 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 
-// vite.config.js
 export default defineConfig({
-  build: {
-    outDir: 'dist', // Make sure this matches with your publish directory
-  },
- });
- 
+  plugins: [react()],
+})
