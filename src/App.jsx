@@ -1,8 +1,10 @@
-import {Input} from './components/index'
+import {Todo} from './components/index'
 function App() {
+  console.log("hello");
   return (
-    <main className="flex items-center justify-center  mt-28">
-<Input/>
+
+    <main className="flex items-center justify-center">
+<Todo/>
     </main>
   )
 }
