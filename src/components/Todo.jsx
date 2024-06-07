@@ -24,9 +24,9 @@ const Input = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setError({ type: "", show: false, msg: "" });
-    }, 2000);
+    }, 1200);
     return () => clearTimeout(timer);
-  },[isValue]);
+  });
 
   useEffect(() => {
     refContainer.current.focus();
@@ -99,7 +99,7 @@ const Input = () => {
   return (
     <div className="flex flex-col">
       <div className="m-4">
-        <Alert {...isError} />
+    
       </div>
       <div className="m-12">
         <Search
@@ -111,8 +111,8 @@ const Input = () => {
       <div className="flex flex-col">
         <div className="bg-white p-8 rounded shadow-md w-96">
           <h1 className="text-3xl font-bold mb-6 text-center">Todo List</h1>
-          <div className="flex mb-6">
-            <form className="flex">
+          <div className="flex flex-col mb-6">
+            <form className="flex flex-row">
               <InputBox
                 refContainer={refContainer}
                 isValue={isValue}
@@ -120,6 +120,7 @@ const Input = () => {
               />
               <AddEditBtn isEdit={isEdit} handleSubmit={handleSubmit} />
             </form>
+            <Alert {...isError} />
           </div>
         </div>
 
