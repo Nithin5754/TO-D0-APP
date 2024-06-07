@@ -1,6 +1,3 @@
 
-
-
-ashiq
-
+nivn jojiq
 
